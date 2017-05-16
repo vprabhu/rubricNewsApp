@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">rubricNewsApp</string>
+    <string name="info_empty_text">No Articles are found.</string>
+    <string name="info_no_internet">No Internet connection is available</string>
+</resources>
