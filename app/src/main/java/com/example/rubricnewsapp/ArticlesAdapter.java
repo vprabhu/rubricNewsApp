@@ -44,15 +44,19 @@ public class ArticlesAdapter extends ArrayAdapter<ArticleInfo> {
         // updates the Data UI
 
         ArticleInfo mArticleInfo = getItem(position);
-
+        // sets the article title to title textview
         mHolder.mArticleNameTextView.setText(mArticleInfo.getmTitile());
+        // sets the section name to section textview
         mHolder.mArticleSectionTextView.setText(mArticleInfo.getmSectionName());
-        mHolder.mArticleDateView.setText(mArticleInfo.getPublishedOn());
+        // sets the date and time to date textview
+        mHolder.mArticleDateView.setText(mArticleInfo.getPublishedOn().replace("T" , "-").replace("Z",""));
 
         return convertView;
     }
 
-
+    /**
+     * View holder to host the UI
+     */
     static class ViewHolder{
         private TextView mArticleNameTextView;
         private TextView mArticleSectionTextView;

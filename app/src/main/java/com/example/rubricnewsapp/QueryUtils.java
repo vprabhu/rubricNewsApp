@@ -47,7 +47,7 @@ public final class QueryUtils {
         try {
 
             // TODO: Parse the response given by the SAMPLE_JSON_RESPONSE string and
-            // build up a list of Earthquake objects with the corresponding data.
+            // build up a list of articles objects with the corresponding data.
             JSONObject mJsonObject = new JSONObject(jsonResponse);
             JSONArray mResultsArray = mJsonObject.getJSONObject("response").getJSONArray("results");
             int size = mResultsArray.length();
@@ -162,7 +162,7 @@ public final class QueryUtils {
             Log.e(LOG_TAG, "Error closing input stream", e);
         }
 
-        // Extract relevant fields from the JSON response and create an {@link Event} object
+        // Extract relevant fields from the JSON response and create an {@link ArticleInfo} object
         List<ArticleInfo> articleInfoList = extractEarthquakes(jsonResponse);
 
         // Return the {@link Event}

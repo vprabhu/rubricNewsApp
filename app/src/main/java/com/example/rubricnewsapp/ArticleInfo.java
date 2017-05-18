@@ -33,4 +33,14 @@ public class ArticleInfo {
     public String getmWebUrl() {
         return mWebUrl;
     }
+
+    @Override
+    public String toString() {
+        return "ArticleInfo{" +
+                "mTitile='" + mTitile + '\'' +
+                ", mSectionName='" + mSectionName + '\'' +
+                ", publishedOn='" + publishedOn + '\'' +
+                ", mWebUrl='" + mWebUrl + '\'' +
+                '}';
+    }
 }
